@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(30, 38%, 92%);
+}
+.card {
+  max-width: 666px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 1rem;
+}
+.img-container {
+  width: 50%;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.card-content {
+  width: 50%;
+  padding: 2rem;
+}
+
+.card-content .name {
+  font-family: "montserrat";
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 1.75rem;
+}
+.card-content .title {
+  font-family: "fraunces", serif;
+  font-size: 34px;
+  padding-right: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.card-content .description {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "montserrat";
+  margin-bottom: 1.75rem;
+  line-height: 22px;
+  color: hsl(228, 12%, 48%);
+}
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.price-container .newprice {
+  color: hsl(158, 36%, 37%);
+  font-family: "fraunces", serif;
+  font-size: 30px;
+  font-weight: 900;
+}
+.price-container .oldprice {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+.card-content .card-btn {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: hsl(158, 36%, 37%);
+  gap: 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.card-content .card-btn:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+@media only screen and (max-width: 550px) {
+  .card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .img-container {
+    width: 100%;
+    height: 40%;
+  }
+
+  .img-container img {
+    content: url("./images/image-product-mobile.jpg");
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card-content {
+    width: 100%;
+  }
+  .card-content .title {
+    padding-right: 0;
+  }
+  .img-container img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+}
